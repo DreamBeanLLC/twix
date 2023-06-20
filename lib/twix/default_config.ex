@@ -215,6 +215,7 @@ defmodule Twix.DefaultConfig do
       p: %{p: ["px", {Twix.Validate, :is_length}]},
 
       # https://tailwindcss.com/docs/padding
+      # https://tailwindcss.com/docs/padding
       px: %{px: ["px", {Twix.Validate, :is_length}]},
 
       # https://tailwindcss.com/docs/padding
@@ -236,22 +237,43 @@ defmodule Twix.DefaultConfig do
       m: %{m: ["auto", "px", {Twix.Validate, :is_length}]},
 
       # https://tailwindcss.com/docs/margin
+      "-m": %{"-m": ["auto", "px", {Twix.Validate, :is_length}]},
+
+      # https://tailwindcss.com/docs/margin
       mx: %{mx: ["auto", "px", {Twix.Validate, :is_length}]},
+
+      # https://tailwindcss.com/docs/margin
+      "-mx": %{"-mx": ["auto", "px", {Twix.Validate, :is_length}]},
 
       # https://tailwindcss.com/docs/margin
       my: %{my: ["auto", "px", {Twix.Validate, :is_length}]},
 
       # https://tailwindcss.com/docs/margin
+      "-my": %{"-my": ["auto", "px", {Twix.Validate, :is_length}]},
+
+      # https://tailwindcss.com/docs/margin
       mt: %{mt: ["auto", "px", {Twix.Validate, :is_length}]},
+
+      # https://tailwindcss.com/docs/margin
+      "-mt": %{"-mt": ["auto", "px", {Twix.Validate, :is_length}]},
 
       # https://tailwindcss.com/docs/margin
       mr: %{mr: ["auto", "px", {Twix.Validate, :is_length}]},
 
       # https://tailwindcss.com/docs/margin
+      "-mr": %{"-mr": ["auto", "px", {Twix.Validate, :is_length}]},
+
+      # https://tailwindcss.com/docs/margin
       mb: %{mb: ["auto", "px", {Twix.Validate, :is_length}]},
 
       # https://tailwindcss.com/docs/margin
+      "-mb": %{"-mb": ["auto", "px", {Twix.Validate, :is_length}]},
+
+      # https://tailwindcss.com/docs/margin
       ml: %{ml: ["auto", "px", {Twix.Validate, :is_length}]},
+
+      # https://tailwindcss.com/docs/margin
+      "-ml": %{"-ml": ["auto", "px", {Twix.Validate, :is_length}]},
 
       # https://tailwindcss.com/docs/space
       "space-x": %{"space-x": [{Twix.Validate, :is_length}]},
@@ -1046,8 +1068,11 @@ defmodule Twix.DefaultConfig do
       px: ~w(pr pl),
       py: ~w(pt pb),
       m: ~w(mx my mt mr mb ml),
+      "-m": ~w(-mx -my -mt -mr -mb -ml),
       mx: ~w(mr ml),
+      "-mx": ~w(-mr -ml),
       my: ~w(mt mb),
+      "-my": ~w(-mt -mb),
       "font-size": ~w(leading),
       "fvn-normal": ~w(fvn-ordinal fvn-slashed-zero fvn-figure fvn-spacing fvn-fraction),
       "fvn-ordinal": ~w(fvn-normal),
